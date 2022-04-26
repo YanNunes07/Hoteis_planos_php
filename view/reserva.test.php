@@ -76,10 +76,10 @@
                         </div>
                         <label>Selecione sua Suíte</label>
                         <select class="browser-default" name="txtplano">
-                            <option value="" disabled selected>Planos </option>
-                            <option value="1" >Suíte Double Master </option>
-                            <option value="2">Suíte Família </option>
-                            <option value="3">Suíte Single </option>
+                            <option value="ceu" disabled selected>Planos </option>
+                            <option value="Master" >Suíte Double Master </option>
+                            <option value="Família">Suíte Família </option>
+                            <option value="Single">Suíte Single </option>
                         </select>
                         <div class="input-field col s12">
                             <button class="btn waves-effect waves-light" type="submit" name="action">Enviar

@@ -124,23 +124,45 @@ class Reserva
 
     function total()
     {
-        $this->tipoPlano;
+        
         switch ($this->tipoPlano) {
-            case 1:
-                $this->tipoPlano = "Suíte Double Master: R$" + ($this->suiteDouble() * $this->diaria);
+            case "Master":
+                return "Suíte Double Master: R$" .($this->suiteDouble() * $this->diaria);
                 break;
-            case 2:
-                $this->tipoPlano = "Suíte Família: R$" + ($this->suiteFamilia() * $this->diaria);
+            case "Família":
+                return "Suíte Família: R$" .($this->suiteFamilia() * $this->diaria);
                 break;
-            case 3:
-                $this->tipoPlano = "Suíte Single: R$" + (100 * $this->diaria);
+            case "Single":
+                return "Suíte Single: R$" .(100 * $this->diaria);
                 break;
             default:
-               $this->tipoPlano = "plano invalido";
+              return $this->tipoPlano = "plano invalido";
                break;
         }
-        return $this->tipoPlano;
+     
     }
+
+    function getQuarto()
+    {
+        
+        switch ($this->tipoPlano) {
+            case "Master":
+                return "Suíte Double Master" ;
+                break;
+            case "Família":
+                return "Suíte Família";
+                break;
+            case "Single":
+                return "Suíte Single";
+                break;
+            default:
+              return "plano invalido";
+               break;
+        }
+  
+    }
+
+
 
 
 
@@ -152,7 +174,9 @@ class Reserva
                      Idade: $this->idade
                      Telefone: $this->telefone
                      Quantidades de dias: $this->diaria
+                     Tipo plano: {$this->getQuarto()}
                      Seu plano: {$this->total()}
                      ");
     }
 }
+

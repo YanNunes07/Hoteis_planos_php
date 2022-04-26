@@ -54,7 +54,7 @@
             $reser->setRG($_POST["txtrg"]);
             $reser->setDiaria($_POST["txtdias"]);
             $reser->setRG($_POST["txtrg"]);
-            
+            $reser->setTipoPlano($_POST["txtplano"]);
 
 
 
